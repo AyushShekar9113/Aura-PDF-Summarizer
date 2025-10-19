@@ -3,6 +3,7 @@ streamlit
 python-dotenv
 deep-translator
 pypdf
+sentence-transformers
 # FAISS
 faiss-cpu
 
