@@ -7,5 +7,5 @@ google-generativeai
 faiss-cpu
 deep-translator
 python-dotenv
-langchain-text-splitters
+langchain-text-splitter
 
