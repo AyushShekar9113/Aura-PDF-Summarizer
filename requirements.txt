@@ -2,7 +2,7 @@
 streamlit
 python-dotenv
 deep-translator
-
+pypdf
 # FAISS
 faiss-cpu
 
