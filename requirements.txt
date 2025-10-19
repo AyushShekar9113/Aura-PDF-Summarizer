@@ -1,17 +1,17 @@
 # Streamlit
-streamlit==1.38.0
-python-dotenv==1.0.1
-deep-translator==1.11.4
+streamlit
+python-dotenv
+deep-translator
 
 # FAISS
-faiss-cpu==1.12.0
+faiss-cpu
 
 # LangChain stack (compatible versions)
-langchain==0.3.27
-langchain-community==0.3.27
-langchain-huggingface==0.3.1
-langchain-google-genai==1.0.6
-langchain-text-splitters==0.3.1
+langchain
+langchain-community
+langchain-huggingface
+langchain-google-genai
+langchain-text-splitters
 
 # HuggingFace
 huggingface-hub>=0.33.4
