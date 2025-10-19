@@ -1,18 +1,23 @@
-# Core packages
+# Streamlit
 streamlit==1.38.0
 python-dotenv==1.0.1
 deep-translator==1.11.4
+
+# FAISS
 faiss-cpu==1.12.0
-rich==13.7.1
 
-# LangChain ecosystem - compatible versions
-langchain>=0.3.3,<0.4.0
-langchain-community>=0.3.3,<0.4.0
-langchain-huggingface>=0.3.1,<0.4.0
-langchain-google-genai>=1.0.6,<2.0.0
-langchain-text-splitters>=0.3.1,<0.4.0
+# LangChain stack (compatible)
+langchain==0.3.31
+langchain-core==0.3.31
+langchain-community==0.3.31
+langchain-huggingface==0.3.1
+langchain-google-genai==1.0.6
+langchain-text-splitters==0.3.1
 
-# Other dependencies
+# HuggingFace
 huggingface-hub>=0.33.4
+
+# Others
 tiktoken==0.7.0
 google-generativeai==0.7.2
+rich==13.7.1
