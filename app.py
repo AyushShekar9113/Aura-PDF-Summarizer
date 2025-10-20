@@ -148,10 +148,10 @@ def create_vectorstore_from_file(path: str):
         raise ValueError("No text was extracted from the PDF (maybe scanned pages?)")
 
     # embeddings: force CPU to avoid meta tensor errors
-    embedding = GoogleGenerativeAIEmbeddings(
-        model="models/embedding-001",
-        api_key=GOOGLE_API_KEY
-        # model_kwargs={"device": "cpu"}
+    embedding = HuggingFaceEmbeddings(
+        model_name="sentence-transformers/paraphrase-MiniLM-L3-v2",
+        # api_key=GOOGLE_API_KEY
+        model_kwargs={"device": "cpu"}
     )
 
     vectorstore = FAISS.from_documents(docs, embedding)
