@@ -43,7 +43,6 @@ def apply_theme():
         """
     st.markdown(f"<style>{dark_css}</style>", unsafe_allow_html=True)
 
-# apply_theme()
 
 # ----------------------------
 # CSS / Theme toggles
@@ -166,7 +165,7 @@ def answer_with_llm(context: str, question: str, model_name: str = "gemini-2.5-f
     Run the prompt through the LLM and return the final text and optionally timings.
     We'll also return a short "summary" for export use.
     """
-    llm = ChatGoogleGenerativeAI(model=model_name, google_api_key=GOOGLE_API_KEY)
+    llm = ChatGoogleGenerativeAI(model=model_name, api_key=GOOGLE_API_KEY)
     template = PromptTemplate.from_template(
         """You are Aura — a helpful assistant that answers using only the provided PDF content.
 Use plain, concise language and if you don't know, say you don't know.
