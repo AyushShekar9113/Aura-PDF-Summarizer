@@ -149,8 +149,8 @@ def create_vectorstore_from_file(path: str):
 
     # embeddings: force CPU to avoid meta tensor errors
     embedding = GoogleGenerativeAIEmbeddings(
-        model_name="models/embedding-001",
-        google_api_key=GOOGLE_API_KEY
+        model="models/embedding-001",
+        api_key=GOOGLE_API_KEY
         # model_kwargs={"device": "cpu"}
     )
 
