@@ -149,11 +149,11 @@ def create_vectorstore_from_file(path: str):
         raise ValueError("No text was extracted from the PDF (maybe scanned pages?)")
 
     # embeddings: force CPU to avoid meta tensor errors
-    embedding = SentenceTransformerEmbeddings(
+    embedding = HuggingFaceEmbeddings(
         # model_name = "BAAI/bge-small-en-v1.5",
         model_name="sentence-transformers/paraphrase-MiniLM-L3-v2",
         # api_key=GOOGLE_API_KEY
-        # model_kwargs={"device": "cpu"},
+        model_kwargs={"device": "cpu"},
         # encode_kwargs={'normalize_embeddings': True}
     )
 
