@@ -1,7 +1,8 @@
 import streamlit as st
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_community.vectorstores import FAISS
-from langchain_huggingface import HuggingFaceEmbeddings
+# from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_community.embeddings import SentenceTransformerEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_google_genai import ChatGoogleGenerativeAI,GoogleGenerativeAIEmbeddings
 from langchain_core.prompts import PromptTemplate
@@ -148,12 +149,12 @@ def create_vectorstore_from_file(path: str):
         raise ValueError("No text was extracted from the PDF (maybe scanned pages?)")
 
     # embeddings: force CPU to avoid meta tensor errors
-    embedding = HuggingFaceEmbeddings(
-        model_name = "BAAI/bge-small-en-v1.5",
-        # model_name="sentence-transformers/paraphrase-MiniLM-L3-v2",
+    embedding = SentenceTransformerEmbeddings(
+        # model_name = "BAAI/bge-small-en-v1.5",
+        model_name="sentence-transformers/paraphrase-MiniLM-L3-v2",
         # api_key=GOOGLE_API_KEY
-        model_kwargs={"device": "cpu"},
-        encode_kwargs={'normalize_embeddings': True}
+        # model_kwargs={"device": "cpu"},
+        # encode_kwargs={'normalize_embeddings': True}
     )
 
     vectorstore = FAISS.from_documents(docs, embedding)
