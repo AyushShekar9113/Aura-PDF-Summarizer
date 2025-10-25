@@ -4,8 +4,8 @@ python-dotenv
 deep-translator
 pypdf
 sentence-transformers
-torch==2.1.2
-transformers==4.36.2
+torch
+transformers
 
 # FAISS
 faiss-cpu
