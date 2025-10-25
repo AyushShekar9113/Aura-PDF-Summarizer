@@ -149,7 +149,7 @@ def create_vectorstore_from_file(path: str):
 
     # embeddings: force CPU to avoid meta tensor errors
     embedding = HuggingFaceEmbeddings(
-        model_name = "BAAI/bge-small-en-v1.5"
+        model_name = "BAAI/bge-small-en-v1.5",
         # model_name="sentence-transformers/paraphrase-MiniLM-L3-v2",
         # api_key=GOOGLE_API_KEY
         model_kwargs={"device": "cpu"},
